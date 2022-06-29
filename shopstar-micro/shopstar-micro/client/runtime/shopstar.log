@@ -1,0 +1,3 @@
+【shopstar】2022-04-02 14:51:17	error	client/client.go:18	创建服务：member error 	{"error": "dial tcp :9000: connectex: No connection could be made because the target machine actively refused it."}
+【shopstar】2022-04-02 14:51:17	info	middleware/requestLog.go:42	/member/login	{"start": 0, "end": -2.042565, "cost": 2.042565, "method": "POST", "status": 200, "errors": ""}
+【shopstar】2022-04-02 14:51:41	info	middleware/requestLog.go:42	/member/login	{"start": 0, "end": -0.1000945, "cost": 0.1000945, "method": "POST", "status": 200, "errors": ""}

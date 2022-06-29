@@ -1,0 +1,30 @@
+# mysql：配置，需要注意配置有空格
+app:
+  address: :8080
+mysql:
+  dbname: toboefa
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: "Boolain116622."
+  charset: utf8
+cache:
+  default: freecache
+  expire: 300
+  freecache: {
+    cachesize: 10485760,
+    expiration: 10
+  }
+captcha:
+  key_long: 6
+  img_width: 240
+  img_height: 80
+log:
+  level: info
+  format: console
+  prefix: 【toboefa】
+  filename: "runtime/toboefa.log"
+  maxsize: 10 # 每个日志的最大尺寸(以MB为单位）， 超过该值，系统将会自动进行切割
+  maxbackups: 7 # 保留旧日志最大个数
+  maxage: 15 # 保留旧日志最大天数
+  compress: false                                      #日志备份时，是否进行压缩

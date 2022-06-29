@@ -1,0 +1,58 @@
+# mysql：配置，需要注意配置有空格
+app:
+  address: :9000
+
+mysql:
+  dbname: shop
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: "000000"
+  charset: utf8
+sms:
+  service: smsbao
+  long: 6
+  overdue: 180
+  temp: {
+      code: "【六星商城】你的验证码是%s，%d秒内有效,若非本人操作请忽略此消息。"
+  }
+pay:
+  app_id:
+  ali_public_key:
+  private_key:
+  notify_url: http://tip2hf.natappfree.cc/ali_notifyUrl
+cache:
+  default: freecache
+  expire: 300
+  freecache: {
+    cachesize: 10485760,
+    expiration: 10
+  }
+captcha:
+  key_long: 6
+  img_width: 240
+  img_height: 80
+log:
+  level: info
+  format: console
+  prefix: 【shopstar】
+  filename: "runtime/shopstar.log"
+  maxsize: 10 # 每个日志的最大尺寸(以MB为单位）， 超过该值，系统将会自动进行切割
+  maxbackups: 7 # 保留旧日志最大个数
+  maxage: 15 # 保留旧日志最大天数
+  compress: false                                      #日志备份时，是否进行压缩
+smsbao:
+  api: http://api.smsbao.com/sms
+  user:
+  pass:
+  statusStr: {
+    "0":"短信发送成功",
+    "-1":"参数不全",
+    "-2":"服务器空间不支持,请确认支持curl或者fsocket，联系您的空间商解决或者更换空间！",
+    "30":"密码错误",
+    "40":"账号不存在",
+    "41":"余额不足",
+    "42":"帐户已过期",
+    "43":"IP地址限制",
+    "50":"内容含有敏感词"
+  }

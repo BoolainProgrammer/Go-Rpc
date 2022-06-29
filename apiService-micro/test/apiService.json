@@ -1,0 +1,16 @@
+
+{
+  "moduleId": 1,
+  "apiName" : "test_2",
+  "apiDes" : "test_2_desc",
+  "httpMethod" : "http",
+  "url" : "127.0.0.2",
+  "port" : ":8001",
+  "audienceIdent" : "/api",
+  "path" : "/add-api",
+  "isCheck" : "false",
+  "paramType" : "post",
+  "isParam" : "true",
+  "requestParam" : "{data:asda}",
+  "status" : 1
+}

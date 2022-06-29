@@ -1,0 +1,10 @@
+{
+  "parentId": 0,
+  "name": "主菜单",
+  "code": "100-0-0",
+  "type": "1",
+  "content": "test",
+  "displayOrder": 1,
+  "isDisplay": "false",
+  "status": "true"
+}
