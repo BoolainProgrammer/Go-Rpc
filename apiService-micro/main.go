@@ -1,11 +1,10 @@
 package main
 
 import (
+	"toboefa/app/service"
 	"toboefa/bootstrap"
-	coreRouter "toboefa/core/router"
+	"toboefa/core/rpc"
 	"toboefa/global"
-
-	"toboefa/app/router"
 )
 
 var Config = "conf.yml"
@@ -15,8 +14,9 @@ func main()  {
 	// 启动系统启动
 	bootstrap.Init(Config)
 
-	router.InitRouter()
 	// 启动系统服务
 	// fmt.Println(global.Config.App.Host + ":" + global.Config.App.Port)
-	coreRouter.InitRoutes().Run(global.Config.App.Address)
+	//coreRouter.InitRoutes().Run(global.Config.App.Address)
+	rpc.NewServer(service.NewApiServiceServer).Run(global.Config.App.Address)
 }
+

@@ -1,15 +1,11 @@
 package v1
 
 import (
-	"toboefa/app/service"
-)
-
-var (
-	ApiServices 	 			 = service.Services.Api
-	MenuServices 	 			 = service.Services.Menu
+	"toboefa/app/client"
 )
 
 type Api struct {
 	ApiService
-	Menu
 }
+
+var RpcClient = client.RpaClient

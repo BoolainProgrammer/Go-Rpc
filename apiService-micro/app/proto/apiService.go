@@ -1,18 +1,6 @@
-package response
+package proto
 
-
-
-
-
-type ApiList struct {
-	List     []*ApiService `json:"list"`
-	Page     int `json:"page"`
-	PageSize int `json:"pageSize"`
-	Total    int `json:"total"`
-}
-
-
-type ApiService struct {
+type AddApiServiceReq struct {
 	Id            int    `json:"id"`
 	ModuleId      int    `json:"moduleId" binding:"required"`
 	ApiName       string `json:"apiName" binding:"required"`
@@ -28,5 +16,4 @@ type ApiService struct {
 	RequestParam  string `json:"requestParam" binding:"required"`
 	Status        string `json:"status" binding:"required"`
 	UpdatedUser   string
-	CreatedUser   string
 }

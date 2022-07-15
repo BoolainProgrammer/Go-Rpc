@@ -1,6 +1,13 @@
 # mysql：配置，需要注意配置有空格
 app:
   address: :8080
+rpc:
+  server: {
+    api_service: {
+      network: "tcp",
+      address: ":9000"
+    }
+  }
 mysql:
   dbname: toboefa
   host: 127.0.0.1
